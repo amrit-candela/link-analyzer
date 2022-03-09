@@ -1,9 +1,9 @@
 package com.linkanalyzer.linkanalyzer;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
-import android.widget.Button;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -14,8 +14,8 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.linkanalyzer.linkanalyzer.databinding.ActivityMainBinding;
+import com.linkanalyzer.linkanalyzer.linkInfo.ScanWifi;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+//                ScanWifi scanWifi = new ScanWifi();
+//                scanWifi.scan_wifi(getApplicationContext());
             }
         });
 
