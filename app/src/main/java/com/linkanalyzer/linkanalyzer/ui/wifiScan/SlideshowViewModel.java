@@ -1,16 +1,16 @@
-package com.linkanalyzer.linkanalyzer.ui.home;
+package com.linkanalyzer.linkanalyzer.ui.wifiScan;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class SlideshowViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public SlideshowViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mText.setValue("This is Wifi Scan fragment");
     }
 
     public LiveData<String> getText() {

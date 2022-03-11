@@ -7,54 +7,59 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_device_information"
+            android:menuCategory="secondary"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_wifi_details"
+            android:menuCategory="secondary"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_wifi_scan"
+            android:menuCategory="secondary"
             android:title="@string/menu_slideshow" />
 
         <item
-            android:id="@+id/local_scan"
+            android:id="@+id/localScanFragment"
             android:icon="@drawable/ic_lan_cable"
+            android:menuCategory="secondary"
             android:title="@string/local_scan" />
 
         <item
-            android:id="@+id/cellular_details"
+            android:id="@+id/cellularDetailsFragment"
             android:icon="@drawable/ic_cell_tower"
+            android:menuCategory="secondary"
             android:title="Cellular Details" />
 
+        <item
+            android:id="@+id/channelGraphFragment"
+            android:icon="@drawable/ic_graph"
+            android:menuCategory="secondary"
+            android:title="@string/channel_graph" />
+
+        <item
+            android:id="@+id/timeGraphFragment"
+            android:icon="@drawable/ic_time_graph"
+            android:menuCategory="secondary"
+            android:title="@string/time_graph" />
+
+        <item
+            android:id="@+id/saveDataFragment"
+            android:icon="@drawable/ic_save"
+            android:menuCategory="secondary"
+            android:title="@string/save_data" />
     </group>
 
-    <item android:title="Graphs">
-        <menu>
-            <item
-                android:id="@+id/channel_graph"
-                android:icon="@drawable/ic_graph"
-                android:title="@string/channel_graph" />
-
-            <item
-                android:id="@+id/time_graph"
-                android:icon="@drawable/ic_time_graph"
-                android:title="@string/time_graph" />
-
-        </menu>
-    </item>
-
     <item
-        android:id="@+id/save_data"
-        android:icon="@drawable/ic_save"
-        android:title="@string/save_data" />
-
-    <item android:title="About Us">
+        android:menuCategory="secondary"
+        android:title="About Us">
         <menu>
             <item
-                android:id="@+id/about"
+                android:id="@+id/aboutFragment"
                 android:icon="@drawable/ic_info_about"
-                android:title="About" />
+                android:menuCategory="secondary"
+                android:title="@string/about" />
         </menu>
     </item>
 </menu>

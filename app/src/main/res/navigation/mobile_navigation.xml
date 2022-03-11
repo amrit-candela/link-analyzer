@@ -7,19 +7,49 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.linkanalyzer.linkanalyzer.ui.home.HomeFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.phoneInfo.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.linkanalyzer.linkanalyzer.ui.gallery.GalleryFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.wifiDetails.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.linkanalyzer.linkanalyzer.ui.slideshow.SlideshowFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.wifiScan.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/localScanFragment"
+        android:name="com.linkanalyzer.linkanalyzer.Fragments.localScanFragment"
+        android:label="Local Scan"
+        tools:layout="@layout/fragment_local_scan" />
+    <fragment
+        android:id="@+id/cellularDetailsFragment"
+        android:name="com.linkanalyzer.linkanalyzer.Fragments.CellularDetailsFragment"
+        android:label="Cellular Details"
+        tools:layout="@layout/fragment_cellular_details" />
+    <fragment
+        android:id="@+id/channelGraphFragment"
+        android:name="com.linkanalyzer.linkanalyzer.Fragments.ChannelGraphFragment"
+        android:label="Channel Graph"
+        tools:layout="@layout/fragment_channel_graph" />
+    <fragment
+        android:id="@+id/timeGraphFragment"
+        android:name="com.linkanalyzer.linkanalyzer.Fragments.TimeGraphFragment"
+        android:label="Time Graph"
+        tools:layout="@layout/fragment_time_graph" />
+    <fragment
+        android:id="@+id/saveDataFragment"
+        android:name="com.linkanalyzer.linkanalyzer.Fragments.SaveDataFragment"
+        android:label="Save Data"
+        tools:layout="@layout/fragment_save_data" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.linkanalyzer.linkanalyzer.Fragments.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
 </navigation>

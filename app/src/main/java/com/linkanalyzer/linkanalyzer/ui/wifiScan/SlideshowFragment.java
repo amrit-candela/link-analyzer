@@ -1,4 +1,4 @@
-package com.linkanalyzer.linkanalyzer.ui.slideshow;
+package com.linkanalyzer.linkanalyzer.ui.wifiScan;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,7 +12,6 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.linkanalyzer.linkanalyzer.R;
 import com.linkanalyzer.linkanalyzer.databinding.FragmentSlideshowBinding;
 
 public class SlideshowFragment extends Fragment {
