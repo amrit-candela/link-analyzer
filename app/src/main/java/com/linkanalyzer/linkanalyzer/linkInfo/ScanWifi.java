@@ -43,6 +43,7 @@ public class ScanWifi extends AppCompatActivity {
             }
             int level = sr.level; //Get level/rssi
             int frequency = sr.frequency; //Get frequency
+//            int channel = sr.
             if (conneted_bssid.equals(bssid)) {
                 ssid += "(connected)";
             }

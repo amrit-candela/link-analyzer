@@ -6,15 +6,55 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_device_information"
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/ic_wifi_details"
             android:title="@string/menu_gallery" />
         <item
             android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_wifi_scan"
             android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/local_scan"
+            android:icon="@drawable/ic_lan_cable"
+            android:title="@string/local_scan" />
+
+        <item
+            android:id="@+id/cellular_details"
+            android:icon="@drawable/ic_cell_tower"
+            android:title="Cellular Details" />
+
     </group>
+
+    <item android:title="Graphs">
+        <menu>
+            <item
+                android:id="@+id/channel_graph"
+                android:icon="@drawable/ic_graph"
+                android:title="@string/channel_graph" />
+
+            <item
+                android:id="@+id/time_graph"
+                android:icon="@drawable/ic_time_graph"
+                android:title="@string/time_graph" />
+
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/save_data"
+        android:icon="@drawable/ic_save"
+        android:title="@string/save_data" />
+
+    <item android:title="About Us">
+        <menu>
+            <item
+                android:id="@+id/about"
+                android:icon="@drawable/ic_info_about"
+                android:title="About" />
+        </menu>
+    </item>
 </menu>

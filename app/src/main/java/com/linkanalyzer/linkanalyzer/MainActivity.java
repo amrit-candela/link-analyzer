@@ -1,6 +1,7 @@
 package com.linkanalyzer.linkanalyzer;
 
 import android.app.Activity;
+import android.net.TrafficStats;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -21,10 +22,18 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    public float upload_speed, download_download;
+    public static float last_bps_time = 0;
+    public static long last_rx_bytes = 0;
+    public static long last_tx_bytes = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        last_bps_time = System.currentTimeMillis();
+        last_tx_bytes = TrafficStats.getTotalTxBytes();
+        last_rx_bytes = TrafficStats.getTotalRxBytes();
 
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());

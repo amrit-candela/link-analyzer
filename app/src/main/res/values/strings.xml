@@ -3,11 +3,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">LINK ANALYZER</string>
-    <string name="nav_header_subtitle">Complete Solution for Link Analysis</string>
+    <string name="nav_header_subtitle">LET\'S DEBUG THIS</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="wifi_signal">☣ 📶 </string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Phone Info</string>
+    <string name="menu_gallery">WiFi Details</string>
+    <string name="menu_slideshow">WiFi Scan</string>
+    <string name="local_scan">Local Scan</string>
+    <string name="channel_graph">Channel Graph</string>
+    <string name="time_graph">Time Graph</string>
+    <string name="save_data">Save Data</string>
 </resources>
