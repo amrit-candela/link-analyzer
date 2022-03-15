@@ -62,7 +62,7 @@ public class ScanWifi extends AppCompatActivity {
                     "\t\uD83D\uDCF6 " + level + "\nFrequency " + frequency + "\tage⏱ " + age +
                     "\t\t\tdistance: " + dist_in_meters + "m\n" + "\uD83D\uDD12 " + capability;
             scan_data.put(String.valueOf(i + 1), String.valueOf(data));
-//            System.out.println("Scan data: " + data);
+            System.out.println("Scan data: " + data);
         }
         return scan_data;
     }
