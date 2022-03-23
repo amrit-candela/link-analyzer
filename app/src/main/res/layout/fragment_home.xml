@@ -18,8 +18,7 @@
                 android:layout_marginTop="0dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:stretchColumns="1"
-                android:layout_weight="1">
+                android:stretchColumns="1">
             </TableLayout>
         </LinearLayout>
     </ScrollView>

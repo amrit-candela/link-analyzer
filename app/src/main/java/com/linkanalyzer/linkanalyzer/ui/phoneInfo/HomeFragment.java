@@ -15,6 +15,7 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -25,7 +26,9 @@ import com.linkanalyzer.linkanalyzer.R;
 import com.linkanalyzer.linkanalyzer.databinding.FragmentHomeBinding;
 import com.linkanalyzer.linkanalyzer.linkInfo.ScanWifi;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Vector;
 
@@ -65,7 +68,26 @@ public class HomeFragment extends Fragment {
                 system_info.put("CPU_ABI", Build.CPU_ABI);
                 system_info.put("HARDWARE", Build.HARDWARE);
                 system_info.put("DEVICE", Build.DEVICE);
-//                system_info.put("FINGERPRINT", Build.FINGERPRINT);
+                system_info.put("USER", Build.USER);
+                system_info.put("TAGS", Build.TAGS);
+                system_info.put("TYPE", Build.TYPE);
+                system_info.put("BOOTLOADER", Build.BOOTLOADER);
+                system_info.put("RADIO", Build.RADIO);
+                String radioversion = Build.getRadioVersion();
+                String radio = "";
+                List<String> radioVersionDetails = Arrays.asList(radioversion.split(","));
+                for (String ch: radioVersionDetails){
+                    radio += ch + "\n";
+                }
+                system_info.put("Radio", radio);
+                String FingerPrint =  Build.FINGERPRINT;
+                String fingerPrint = "";
+                List<String> fingerPrintDetails = Arrays.asList(FingerPrint.split("/"));
+                for (String ch: fingerPrintDetails){
+                    fingerPrint += ch + "/" + "\n";
+                }
+                system_info.put("FINGERPRINT",fingerPrint);
+
 //                system_info.put("DISPLAY", Build.DISPLAY);
 //                system_info.put("ODM_SKU", Build.ODM_SKU);
 //                system_info.put("", Build.SOC_MANUFACTURER);
@@ -134,15 +156,21 @@ public class HomeFragment extends Fragment {
                     legacy = false;
                 }
 
+//                system_info.put("legacy", legacy.toString());
+//                system_info.put("AC_11", AC_11.toString());
+//                system_info.put("AX_11", AX_11.toString());
+//                system_info.put("N_11", N_11.toString());
                 int i = 0;
                 for (Map.Entry<String, String> entry : system_info.entrySet()){
                     TableRow tbrow = new TableRow(getActivity());
                     if (i % 2 == 0) {
-                        tbrow.setBackgroundColor(Color.rgb(245, 245, 245));
+                        tbrow.setBackgroundColor(Color.rgb(211, 211, 211));
                     } else {
                         tbrow.setBackgroundColor(Color.rgb(255, 255, 255));
                     }
 
+                    tbrow.setBackgroundResource(R.drawable.border);
+                    tbrow.setPadding(0, 10, 0, 10);
                     TextView key_view = new TextView(getActivity());
                     key_view.setText(entry.getKey());
                     key_view.setTextSize(15);
