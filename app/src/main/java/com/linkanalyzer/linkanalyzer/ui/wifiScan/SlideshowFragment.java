@@ -62,6 +62,8 @@ public class SlideshowFragment extends Fragment {
                         tbrow.setBackgroundColor(Color.rgb(192, 192, 192));
                     }
 
+                    tbrow.setBackgroundResource(R.drawable.border);
+                    tbrow.setPadding(0, 10, 0, 10);
                     TextView key_view = new TextView(getActivity());
                     key_view.setText(entry.getKey());
                     key_view.setTextSize(15);
