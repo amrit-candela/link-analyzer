@@ -87,6 +87,8 @@ public class HomeFragment extends Fragment {
                     fingerPrint += ch + "/" + "\n";
                 }
                 system_info.put("FINGERPRINT",fingerPrint);
+//                system_info.put("FINGERPRINT",Build.FINGERPRINT);
+                System.out.println("FINGERPRINT: "+Build.FINGERPRINT);
 
 //                system_info.put("DISPLAY", Build.DISPLAY);
 //                system_info.put("ODM_SKU", Build.ODM_SKU);
