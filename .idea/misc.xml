@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/border.xml" value="0.26458333333333334" />
+        <entry key="app/src/main/res/drawable/gradient.xml" value="0.2296875" />
         <entry key="app/src/main/res/drawable/ic_logo.xml" value="0.18489583333333334" />
         <entry key="app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2359375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25364583333333335" />

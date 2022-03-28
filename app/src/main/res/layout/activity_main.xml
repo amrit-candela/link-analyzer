@@ -20,8 +20,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:backgroundTint="@color/non_photo_blue"
-        app:itemIconTint="@color/royal_dark_blue"
+        android:background="@drawable/gradient"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
 </androidx.drawerlayout.widget.DrawerLayout>

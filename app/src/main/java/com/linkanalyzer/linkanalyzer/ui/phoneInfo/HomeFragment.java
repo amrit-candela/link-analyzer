@@ -58,38 +58,38 @@ public class HomeFragment extends Fragment {
                 WifiInfo wifiinfo = wifiManager.getConnectionInfo();
                 system_info.put("MANUFACTURER", Build.MANUFACTURER);
                 system_info.put("MODEL", Build.MODEL);
+                system_info.put("DEVICE", Build.DEVICE);
                 system_info.put("PRODUCT", Build.PRODUCT);
                 system_info.put("HOST", Build.HOST);
-                system_info.put("ID", Build.ID);
-                system_info.put("INCREMENTAL", Build.VERSION.INCREMENTAL);
                 system_info.put("RELEASE", Build.VERSION.RELEASE);
                 system_info.put("SDK No.", String.valueOf(Build.VERSION.SDK_INT));
                 system_info.put("BOARD", Build.BOARD);
                 system_info.put("BRAND", Build.BRAND);
                 system_info.put("CPU_ABI", Build.CPU_ABI);
                 system_info.put("HARDWARE", Build.HARDWARE);
-                system_info.put("DEVICE", Build.DEVICE);
                 system_info.put("USER", Build.USER);
                 system_info.put("TAGS", Build.TAGS);
                 system_info.put("TYPE", Build.TYPE);
+                system_info.put("ID", Build.ID);
+                system_info.put("INCREMENTAL", Build.VERSION.INCREMENTAL);
                 system_info.put("BOOTLOADER", Build.BOOTLOADER);
-                system_info.put("RADIO", Build.RADIO);
-                String radioversion = Build.getRadioVersion();
-                String radio = "";
-                List<String> radioVersionDetails = Arrays.asList(radioversion.split(","));
-                for (String ch: radioVersionDetails){
-                    radio += ch + "\n";
-                }
-                system_info.put("Radio", radio);
-                String FingerPrint =  Build.FINGERPRINT;
-                String fingerPrint = "";
-                List<String> fingerPrintDetails = Arrays.asList(FingerPrint.split("/"));
-                for (String ch: fingerPrintDetails){
-                    fingerPrint += ch + "/" + "\n";
-                }
-                system_info.put("FINGERPRINT",fingerPrint);
+//                system_info.put("RADIO", Build.RADIO);
+//                String radioversion = Build.getRadioVersion();
+//                String radio = "";
+//                List<String> radioVersionDetails = Arrays.asList(radioversion.split(","));
+//                for (String ch: radioVersionDetails){
+//                    radio += ch + "\n";
+//                }
+//                system_info.put("Radio", radio);
+//                String FingerPrint =  Build.FINGERPRINT;
+//                String fingerPrint = "";
+//                List<String> fingerPrintDetails = Arrays.asList(FingerPrint.split("/"));
+//                for (String ch: fingerPrintDetails){
+//                    fingerPrint += ch + "/" + "\n";
+//                }
+//                system_info.put("FINGERPRINT",fingerPrint);
 //                system_info.put("FINGERPRINT",Build.FINGERPRINT);
-                System.out.println("FINGERPRINT: "+Build.FINGERPRINT);
+//                System.out.println("FINGERPRINT: "+Build.FINGERPRINT);
 
 //                system_info.put("DISPLAY", Build.DISPLAY);
 //                system_info.put("ODM_SKU", Build.ODM_SKU);
@@ -173,7 +173,7 @@ public class HomeFragment extends Fragment {
                     }
 
                     tbrow.setBackgroundResource(R.drawable.border);
-                    tbrow.setPadding(5, 5, 0, 5);
+                    tbrow.setPadding(0, 25, 0, 25);
                     TextView key_view = new TextView(getActivity());
                     key_view.setText(entry.getKey());
                     key_view.setTextSize(15);
