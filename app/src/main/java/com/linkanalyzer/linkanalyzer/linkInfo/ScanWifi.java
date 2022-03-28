@@ -33,6 +33,15 @@ public class ScanWifi extends AppCompatActivity {
 
             String bssid = sr.BSSID; //Get the BSSID
             String capability = sr.capabilities; //Get Wi-Fi capabilities
+            if (capability.contains("WPA") && capability.contains("WPA2") && capability.contains("WPA3") ){
+                capability = "WPA/WAP2/WPA3";
+            }else if (capability.contains("WPA") && capability.contains("WPA2") ){
+                capability = "WPA/WAP2";
+            }else if (capability.contains("WPA")){
+                capability = "WPA";
+            }else if (capability.contains("WPA") && capability.contains("WPA2")){
+                capability = "WAP2";
+            }
             int centerFreq0 = 0;
             int centerFreq1 = 0;
             int channelWidth = 0;
@@ -43,6 +52,16 @@ public class ScanWifi extends AppCompatActivity {
             }
             int level = sr.level; //Get level/rssi
             int frequency = sr.frequency; //Get frequency
+            float frequency_ghz = 0.0F;
+            if (frequency> 2000 && frequency< 2500){
+                frequency_ghz = 2.4F;
+            }else if (frequency> 3600 && frequency< 3700){
+                frequency_ghz = 3.6F;
+            }else if (frequency> 4940 && frequency< 4991){
+                frequency_ghz = 4.9F;
+            }else if (frequency> 5150 && frequency< 5725){
+                frequency_ghz = 5.0F;
+            }
 //            int channel = sr.
             if (conneted_bssid.equals(bssid)) {
                 ssid += "(connected)";
@@ -57,10 +76,11 @@ public class ScanWifi extends AppCompatActivity {
             double dist = 0.00;
             String dist_in_meters = String.format("%.02f", dist);
 
-            data = "SSID: " + '\"' + ssid + '\"' + "\nbssid: " + bssid + "\ncenterFreq0: " +
-                    centerFreq0 + "\tcenterFreq1: " + centerFreq1 + "\nchannelWidth: " + channelWidth +
-                    "\t\uD83D\uDCF6 " + level + "\nFrequency " + frequency + "\tage⏱ " + age +
-                    "\t\t\tdistance: " + dist_in_meters + "m\n" + "\uD83D\uDD12 " + capability;
+            data = "〖\n\t\tSSID: " + ssid + "\n\t\tBSSID: " + bssid + "\n\t\tCenterFreq0: " +
+                    centerFreq0 + " GHz\n\t\tCenterFreq1: " + centerFreq1 + " GHz\n\t\tChannelWidth: "
+                    + channelWidth + " GHz\n\t\tRSSI: " + level + " dBm" + "\n\t\tAge: " + age +
+                    " Sec\n\t\tdistance: " + dist_in_meters + " meter" + "\n\t\tFrequency: " +
+                    frequency_ghz + " GHz" + "\n\t\tSecurities: " + capability + "\n\t〗";
             scan_data.put(String.valueOf(i + 1), String.valueOf(data));
             System.out.println("Scan data: " + data);
         }

@@ -39,22 +39,14 @@ public class SlideshowFragment extends Fragment {
         slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
-                table = (TableLayout)getView().findViewById(R.id.table);
-                ScanWifi scanWifi = new ScanWifi();
-                Map<String, String> data = new LinkedHashMap<String, String>();
-                data = scanWifi.scan_wifi(getView().getContext());
 
-//
-//                TableRow row = new TableRow(getActivity());
-//                TextView item = new TextView(getActivity());
-////                item.setId(200);
-//                item.setText(data);
-//
-//                row.addView(item);
-//                table.addView(row);
-//
+                table = (TableLayout)getView().findViewById(R.id.table);
+
+                ScanWifi scanWifi = new ScanWifi();
+                Map<String, String> wifi_scan_data = new LinkedHashMap<String, String>();
+                wifi_scan_data = scanWifi.scan_wifi(getView().getContext());
                 int i = 0;
-                for (Map.Entry<String, String> entry : data.entrySet()){
+                for (Map.Entry<String, String> entry : wifi_scan_data.entrySet()){
                     TableRow tbrow = new TableRow(getActivity());
                     if (i % 2 == 0) {
                         tbrow.setBackgroundColor(Color.rgb(211, 211, 211));
@@ -65,12 +57,6 @@ public class SlideshowFragment extends Fragment {
                     tbrow.setBackgroundResource(R.drawable.border);
                     tbrow.setPadding(0, 25, 0, 25);
                     TextView key_view = new TextView(getActivity());
-                    key_view.setText(entry.getKey());
-                    key_view.setTextSize(15);
-                    key_view.setTextColor(Color.BLACK);
-                    key_view.setGravity(Gravity.LEFT);
-                    key_view.setPadding(10,10,10, 0);
-                    tbrow.addView(key_view);
                     TextView val_view = new TextView(getActivity());
                     val_view.setText(entry.getValue());
                     val_view.setTextSize(15);
