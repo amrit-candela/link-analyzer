@@ -11,6 +11,8 @@
     <color name="Blue_Grotto">#189AB4</color>
     <color name="Blue_Green">#75E6DA</color>
     <color name="Baby_Blue">#D4F1F4</color>
+    <color name="transparent_color">#FFFFFFFF</color>
+
 
 
 </resources>
