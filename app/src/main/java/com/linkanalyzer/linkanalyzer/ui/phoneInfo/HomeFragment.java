@@ -7,6 +7,7 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -172,7 +173,7 @@ public class HomeFragment extends Fragment {
                     }
 
                     tbrow.setBackgroundResource(R.drawable.border);
-                    tbrow.setPadding(5, 10, 0, 10);
+                    tbrow.setPadding(5, 5, 0, 5);
                     TextView key_view = new TextView(getActivity());
                     key_view.setText(entry.getKey());
                     key_view.setTextSize(15);

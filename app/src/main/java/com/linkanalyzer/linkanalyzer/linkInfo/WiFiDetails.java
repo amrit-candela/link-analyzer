@@ -2,13 +2,17 @@ package com.linkanalyzer.linkanalyzer.linkInfo;
 
 import android.content.Context;
 import android.net.DhcpInfo;
+import android.net.wifi.ScanResult;
 import android.net.wifi.SupplicantState;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.text.format.Formatter;
 import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.Arrays;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class WiFiDetails extends AppCompatActivity {
@@ -16,6 +20,27 @@ public class WiFiDetails extends AppCompatActivity {
     public Map<String, String> wifi_details(Context context){
         WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         WifiInfo wifiinfo = wifiManager.getConnectionInfo();
+//        List<ScanResult> networkList = wifiManager.getScanResults();
+//        String Security = null;
+//        String Security1 = null;
+//        if (networkList != null) {
+//            for (ScanResult network : networkList)
+//            {
+//                String Capabilities =  network.capabilities;
+//                Security = Capabilities;
+//                System.out.println("Amrit Capabilities: " + Security);
+////                        Log.w ("Amrit Capabilities: ", network.SSID + " capabilities : " + Capabilities);
+//            }
+//        }
+//        List<String> radioVersionDetails = Arrays.asList(Security.split("\\]\\["));
+//        for (String ch: radioVersionDetails){
+//            if (Security1 != null){
+//                Security1 += ch + ",\n";
+//            }else {
+//                Security1 = ch + ",\n";
+//            }
+//
+//        }
         String IP = null;
         String SSID = null;
         String BSSID = null;
@@ -84,6 +109,7 @@ public class WiFiDetails extends AppCompatActivity {
         live_data.put("DNS2", dns2);
         live_data.put("DHCP Server", serverAddress);
         live_data.put("Gateway", gateway);
+//        live_data.put("Securities", Security1);
         live_data.put("LeaseDuration", leaseDuration + " Sec");
         return live_data;
     }

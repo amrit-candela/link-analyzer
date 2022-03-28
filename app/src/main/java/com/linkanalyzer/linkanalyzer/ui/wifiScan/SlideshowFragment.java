@@ -63,7 +63,7 @@ public class SlideshowFragment extends Fragment {
                     }
 
                     tbrow.setBackgroundResource(R.drawable.border);
-                    tbrow.setPadding(0, 10, 0, 10);
+                    tbrow.setPadding(0, 5, 0, 5);
                     TextView key_view = new TextView(getActivity());
                     key_view.setText(entry.getKey());
                     key_view.setTextSize(15);
