@@ -41,6 +41,8 @@ public class ScanWifi extends AppCompatActivity {
                 capability = "WPA";
             }else if (capability.contains("WPA") && capability.contains("WPA2")){
                 capability = "WAP2";
+            }else if (capability.contains("OPEN")){
+                capability = "OPEN";
             }
             int centerFreq0 = 0;
             int centerFreq1 = 0;
@@ -52,10 +54,13 @@ public class ScanWifi extends AppCompatActivity {
             }
             int level = sr.level; //Get level/rssi
             int frequency = sr.frequency; //Get frequency
+            int channels = 1;
             float frequency_ghz = 0.0F;
-            if (frequency> 2000 && frequency< 2500){
+            if (frequency> 2411 && frequency< 2485){
+                channels = (frequency - 2412)/5 + 1;
                 frequency_ghz = 2.4F;
-            }else if (frequency> 3600 && frequency< 3700){
+            }else if (frequency> 3657.5 && frequency< 3692.5){
+//                channels = (frequency - 3657.5) / 2.5;
                 frequency_ghz = 3.6F;
             }else if (frequency> 4940 && frequency< 4991){
                 frequency_ghz = 4.9F;
@@ -80,9 +85,9 @@ public class ScanWifi extends AppCompatActivity {
                     centerFreq0 + " GHz\n\t\tCenterFreq1: " + centerFreq1 + " GHz\n\t\tChannelWidth: "
                     + channelWidth + " GHz\n\t\tRSSI: " + level + " dBm" + "\n\t\tAge: " + age +
                     " Sec\n\t\tdistance: " + dist_in_meters + " meter" + "\n\t\tFrequency: " +
-                    frequency_ghz + " GHz" + "\n\t\tSecurities: " + capability + "\n\t〗";
+                    frequency_ghz + " GHz" + "\n\t\tChannel: " + channels + "\n\t\tSecurities: " + capability + "\n\t〗";
             scan_data.put(String.valueOf(i + 1), String.valueOf(data));
-            System.out.println("Scan data: " + data);
+//            System.out.println("Scan data: " + data);
         }
         return scan_data;
     }
