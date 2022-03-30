@@ -17,10 +17,18 @@ public class ScanWifi extends AppCompatActivity {
 
     public Map<String, String> scan_wifi(Context context){
         WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        if (!wifiManager.isWifiEnabled()){
+            Map<String, String> scan_data = new LinkedHashMap<String, String>();
+            scan_data.put("", "Wi-Fi  is Disabled");
+            return scan_data;
+        }
+        wifiManager.setWifiEnabled(true);
+        wifiManager.startScan();
         String data = "";
         String conneted_bssid = wifiManager.getConnectionInfo().getBSSID();
 
         Map<String, String> scan_data = new LinkedHashMap<String, String>();
+//        wifiManager.startScan();
         List<ScanResult> scan_result = wifiManager.getScanResults();
         for(int i = 0; i < scan_result.size();i++) {
             ScanResult sr = scan_result.get(i);
@@ -68,7 +76,7 @@ public class ScanWifi extends AppCompatActivity {
                 frequency_ghz = 5.0F;
             }
 //            int channel = sr.
-            if (conneted_bssid.equals(bssid)) {
+            if (conneted_bssid != null && conneted_bssid.equals(bssid)) {
                 ssid += "(connected)";
             }
             // timestamp is usec since boot.
