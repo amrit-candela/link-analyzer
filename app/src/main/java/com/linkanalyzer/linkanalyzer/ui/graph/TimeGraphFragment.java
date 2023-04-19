@@ -1,21 +1,20 @@
-package com.linkanalyzer.linkanalyzer.Fragments;
+package com.linkanalyzer.linkanalyzer.ui.graph;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
 
 import com.linkanalyzer.linkanalyzer.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link ChannelGraphFragment#newInstance} factory method to
+ * Use the {@link TimeGraphFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ChannelGraphFragment extends Fragment {
+public class TimeGraphFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +25,7 @@ public class ChannelGraphFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public ChannelGraphFragment() {
+    public TimeGraphFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +35,11 @@ public class ChannelGraphFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ChannelGraphFragment.
+     * @return A new instance of fragment TimeGraphFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ChannelGraphFragment newInstance(String param1, String param2) {
-        ChannelGraphFragment fragment = new ChannelGraphFragment();
+    public static TimeGraphFragment newInstance(String param1, String param2) {
+        TimeGraphFragment fragment = new TimeGraphFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +60,6 @@ public class ChannelGraphFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_channel_graph, container, false);
+        return inflater.inflate(R.layout.fragment_time_graph, container, false);
     }
 }

@@ -34,12 +34,12 @@
         tools:layout="@layout/fragment_cellular_details" />
     <fragment
         android:id="@+id/channelGraphFragment"
-        android:name="com.linkanalyzer.linkanalyzer.Fragments.ChannelGraphFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.graph.ChannelGraphFragment"
         android:label="Channel Graph"
         tools:layout="@layout/fragment_channel_graph" />
     <fragment
         android:id="@+id/timeGraphFragment"
-        android:name="com.linkanalyzer.linkanalyzer.Fragments.TimeGraphFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.graph.TimeGraphFragment"
         android:label="Time Graph"
         tools:layout="@layout/fragment_time_graph" />
     <fragment
