@@ -7,7 +7,6 @@ import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,7 +15,6 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -27,27 +25,24 @@ import com.linkanalyzer.linkanalyzer.R;
 import com.linkanalyzer.linkanalyzer.databinding.FragmentHomeBinding;
 import com.linkanalyzer.linkanalyzer.linkInfo.ScanWifi;
 
-import java.util.Arrays;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.Vector;
 
-public class HomeFragment extends Fragment {
+public class PhoneInfoFragment extends Fragment {
 
-    private HomeViewModel homeViewModel;
+    private PhoneInfoViewModel phoneInfoViewModel;
     private FragmentHomeBinding binding;
     TableLayout table;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                new ViewModelProvider(this).get(HomeViewModel.class);
+        phoneInfoViewModel =
+                new ViewModelProvider(this).get(PhoneInfoViewModel.class);
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        phoneInfoViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 table = (TableLayout)getView().findViewById(R.id.PhoneInfoTable);

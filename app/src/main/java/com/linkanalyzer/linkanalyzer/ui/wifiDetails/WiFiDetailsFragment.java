@@ -18,13 +18,12 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.linkanalyzer.linkanalyzer.R;
 import com.linkanalyzer.linkanalyzer.databinding.FragmentGalleryBinding;
-import com.linkanalyzer.linkanalyzer.linkInfo.ScanWifi;
 import com.linkanalyzer.linkanalyzer.linkInfo.WiFiDetails;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class GalleryFragment extends Fragment {
+public class WiFiDetailsFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
     private FragmentGalleryBinding binding;

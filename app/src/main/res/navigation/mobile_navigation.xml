@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.linkanalyzer.linkanalyzer.ui.phoneInfo.HomeFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.phoneInfo.PhoneInfoFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.linkanalyzer.linkanalyzer.ui.wifiDetails.GalleryFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.wifiDetails.WiFiDetailsFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.linkanalyzer.linkanalyzer.ui.wifiScan.SlideshowFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.wifiScan.WiFiScanFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
     <fragment

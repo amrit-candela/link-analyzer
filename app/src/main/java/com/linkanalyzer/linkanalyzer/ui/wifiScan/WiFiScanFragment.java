@@ -24,21 +24,21 @@ import com.linkanalyzer.linkanalyzer.linkInfo.ScanWifi;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class SlideshowFragment extends Fragment {
+public class WiFiScanFragment extends Fragment {
 
-    private SlideshowViewModel slideshowViewModel;
+    private WiFiScanViewModel wiFiScanViewModel;
     private FragmentSlideshowBinding binding;
     TableLayout table;
     Handler handler;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        wiFiScanViewModel =
+                new ViewModelProvider(this).get(WiFiScanViewModel.class);
 
         binding = FragmentSlideshowBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        wiFiScanViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 int count = 0;
