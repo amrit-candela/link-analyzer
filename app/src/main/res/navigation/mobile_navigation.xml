@@ -29,7 +29,7 @@
         tools:layout="@layout/fragment_local_scan" />
     <fragment
         android:id="@+id/cellularDetailsFragment"
-        android:name="com.linkanalyzer.linkanalyzer.Fragments.CellularDetailsFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.cellularInfo.CellularDetailsFragment"
         android:label="Cellular Details"
         tools:layout="@layout/fragment_cellular_details" />
     <fragment
