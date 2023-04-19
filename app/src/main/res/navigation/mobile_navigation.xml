@@ -24,7 +24,7 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/localScanFragment"
-        android:name="com.linkanalyzer.linkanalyzer.Fragments.localScanFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.lanScan.localScanFragment"
         android:label="Local Scan"
         tools:layout="@layout/fragment_local_scan" />
     <fragment
@@ -44,7 +44,7 @@
         tools:layout="@layout/fragment_time_graph" />
     <fragment
         android:id="@+id/saveDataFragment"
-        android:name="com.linkanalyzer.linkanalyzer.Fragments.SaveDataFragment"
+        android:name="com.linkanalyzer.linkanalyzer.ui.saveData.SaveDataFragment"
         android:label="Save Data"
         tools:layout="@layout/fragment_save_data" />
     <fragment
