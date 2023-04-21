@@ -26,7 +26,7 @@ Overall, the Link Analyzer app is a useful tool for users who want to better und
 [![Build APK](https://github.com/amrit-candela/link-analyzer/actions/workflows/android.yml/badge.svg)](https://github.com/amrit-candela/link-analyzer/actions/workflows/android.yml)
 
 ***
-![Logo](https://github.com/rajamrit-cs/link-analyzer/blob/main/app/src/main/res/drawable/ic_logo.png)
+![Logo](https://github.com/rajamrit-cs/link-analyzer/blob/main/app/src/main/res/drawable/ic_logo.png =250x250)
 
 ## Contributing
 
