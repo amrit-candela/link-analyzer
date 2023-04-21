@@ -1,5 +1,5 @@
 
-# Link Analyzer
+# <a href="url"><img src="https://github.com/rajamrit-cs/link-analyzer/blob/main/app/src/main/res/drawable/ic_logo.png" align="left" height="48" width="48" ></a> Link Analyzer
 ### Link Analyzer an Opensource Android app for reporting Wi-Fi information
 
 With the help of Link Analyzer app, users can easily identify their current Wi-Fi network and check the status of their connection. It can be useful for troubleshooting Wi-Fi connectivity issues, optimizing network performance, and diagnosing interference problems. This app also provides additional information such as the SSID, BSSID, FREQUENCY and MAC address of the Wi-Fi access point. This information can be used to identify specific Wi-Fi networks and access points and to configure network settings.
@@ -28,7 +28,7 @@ Overall, the Link Analyzer app is a useful tool for users who want to better und
 ***
 
 [//]: # (![Logo]&#40;https://github.com/rajamrit-cs/link-analyzer/blob/main/app/src/main/res/drawable/ic_logo.png|width=100px]&#41;)
- <a href="url"><img src="https://github.com/rajamrit-cs/link-analyzer/blob/main/app/src/main/res/drawable/ic_logo.png" align="left" height="48" width="48" ></a>
+
 ## Contributing
 
 We would love for you to contribute! Please [fork and make a pull request](https://github.com/rajamrit-cs/link-analyzer/fork)  to the source branch.
