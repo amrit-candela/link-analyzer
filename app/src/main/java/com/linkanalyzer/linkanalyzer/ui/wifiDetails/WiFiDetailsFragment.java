@@ -25,19 +25,19 @@ import java.util.Map;
 
 public class WiFiDetailsFragment extends Fragment {
 
-    private GalleryViewModel galleryViewModel;
+    private WiFiDetailsViewModel wiFiDetailsViewModel;
     private FragmentGalleryBinding binding;
     TableLayout table;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        wiFiDetailsViewModel =
+                new ViewModelProvider(this).get(WiFiDetailsViewModel.class);
 
         binding = FragmentGalleryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        wiFiDetailsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 table = (TableLayout)getView().findViewById(R.id.table);

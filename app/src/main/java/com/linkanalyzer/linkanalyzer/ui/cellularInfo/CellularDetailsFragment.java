@@ -75,8 +75,6 @@ public class CellularDetailsFragment extends Fragment {
             @Override
             public void onChanged(String s) {
                 table = (TableLayout) getView().findViewById(R.id.PhoneInfoTable);
-                ScanWifi scanWifi = new ScanWifi();
-
                 Map<String, String> cell_info = new LinkedHashMap<String, String>();
                 TelephonyManager telephonyManager = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
                 cell_info.put("PHONE TYPE", String.valueOf(telephonyManager.getPhoneType()));
@@ -115,11 +113,11 @@ public class CellularDetailsFragment extends Fragment {
                         if (ci.isRegistered()) {
                             if (ci instanceof CellInfoCdma) {
                                 CellInfoCdma cic = (CellInfoCdma) ci;
-                                cell_info.put("getBasestationId", String.valueOf(cic.getCellIdentity().getBasestationId()));
-                                cell_info.put("getDbm", String.valueOf(cic.getCellSignalStrength().getDbm()));
-                                cell_info.put("getAsuLevel", String.valueOf(cic.getCellSignalStrength().getAsuLevel()));
-                                cell_info.put("getLevel", String.valueOf(cic.getCellSignalStrength().getLevel()));
-                                cell_info.put("getCdmaLevel", String.valueOf(cic.getCellSignalStrength().getCdmaLevel()));
+                                cell_info.put("BasestationId", String.valueOf(cic.getCellIdentity().getBasestationId()));
+                                cell_info.put("Dbm", String.valueOf(cic.getCellSignalStrength().getDbm()));
+                                cell_info.put("AsuLevel", String.valueOf(cic.getCellSignalStrength().getAsuLevel()));
+                                cell_info.put("Level", String.valueOf(cic.getCellSignalStrength().getLevel()));
+                                cell_info.put("CdmaLevel", String.valueOf(cic.getCellSignalStrength().getCdmaLevel()));
 
                                 cic.getCellSignalStrength().getLevel();
                                 cic.getCellSignalStrength().getCdmaLevel();
@@ -140,17 +138,17 @@ public class CellularDetailsFragment extends Fragment {
                             }
                             if (ci instanceof CellInfoLte) {
                                 CellInfoLte cic = (CellInfoLte) ci;
-                                cell_info.put("getDbm", String.valueOf(cic.getCellSignalStrength().getDbm()));
-                                cell_info.put("getAsuLevel", String.valueOf(cic.getCellSignalStrength().getAsuLevel()));
-                                cell_info.put("getLevel", String.valueOf(cic.getCellSignalStrength().getLevel()));
+                                cell_info.put("Dbm", String.valueOf(cic.getCellSignalStrength().getDbm()));
+                                cell_info.put("ASU LEVEL", String.valueOf(cic.getCellSignalStrength().getAsuLevel()));
+                                cell_info.put("LEVEL", String.valueOf(cic.getCellSignalStrength().getLevel()));
 //                                cell_info.put("getDbm", String.valueOf(cic.getCellSignalStrength().getRssnr()));
-                                cell_info.put("getMcc", String.valueOf(cic.getCellIdentity().getMcc()));
-                                cell_info.put("getMnc", String.valueOf(cic.getCellIdentity().getMnc()));
-                                cell_info.put("getCi", String.valueOf(cic.getCellIdentity().getCi()));
+                                cell_info.put("MCC", String.valueOf(cic.getCellIdentity().getMcc()));
+                                cell_info.put("MNC", String.valueOf(cic.getCellIdentity().getMnc()));
+                                cell_info.put("CI", String.valueOf(cic.getCellIdentity().getCi()));
 
 
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                                    cell_info.put("Closed Subscriber Group", String.valueOf(cic.getCellIdentity().getClosedSubscriberGroupInfo()));
+                                    cell_info.put("CLOSED Subscriber Group", String.valueOf(cic.getCellIdentity().getClosedSubscriberGroupInfo()));
                                 }
 
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {

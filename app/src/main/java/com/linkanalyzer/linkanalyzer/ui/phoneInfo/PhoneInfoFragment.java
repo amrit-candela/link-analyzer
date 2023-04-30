@@ -46,11 +46,8 @@ public class PhoneInfoFragment extends Fragment {
             @Override
             public void onChanged(@Nullable String s) {
                 table = (TableLayout)getView().findViewById(R.id.PhoneInfoTable);
-                ScanWifi scanWifi = new ScanWifi();
-
                 Map<String, String> system_info = new LinkedHashMap<String, String>();
                 WifiManager wifiManager = (WifiManager) getActivity().getApplicationContext().getSystemService(Context.WIFI_SERVICE);
-                WifiInfo wifiinfo = wifiManager.getConnectionInfo();
                 system_info.put("MANUFACTURER", Build.MANUFACTURER);
                 system_info.put("MODEL", Build.MODEL);
                 system_info.put("DEVICE", Build.DEVICE);
