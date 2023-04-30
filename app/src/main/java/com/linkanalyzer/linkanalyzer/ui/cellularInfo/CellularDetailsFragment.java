@@ -154,33 +154,37 @@ public class CellularDetailsFragment extends Fragment {
                                 }
 
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                                    cell_info.put("Band", String.valueOf(cic.getCellIdentity().getBands()[0]));
-                                    cell_info.put("getEarfcn", String.valueOf(cic.getCellIdentity().getEarfcn()));
+                                    cell_info.put("BAND", String.valueOf(cic.getCellIdentity().getBands()[0]));
+                                    cell_info.put("Ear fcn", String.valueOf(cic.getCellIdentity().getEarfcn()));
 //                                    cic.getCellIdentity().getEarfcn();
 //                                    cell_info.put("getBands1", String.valueOf(cic.getCellIdentity().getBands()[1]));
                                 }
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                                    cell_info.put("getRssi", String.valueOf(cic.getCellSignalStrength().getRssi()));
+                                    cell_info.put("RSSI", String.valueOf(cic.getCellSignalStrength().getRssi()));
                                 }
 
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                                    cell_info.put("getRssnr", String.valueOf(cic.getCellSignalStrength().getRssnr()));
+                                    cell_info.put("RSSNR", String.valueOf(cic.getCellSignalStrength().getRssnr()));
                                 }
 
                                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                                    cell_info.put("getCqiTableIndex", String.valueOf(cic.getCellSignalStrength().getCqiTableIndex()));
+                                    cell_info.put("CQI TABLE INDEX", String.valueOf(cic.getCellSignalStrength().getCqiTableIndex()));
                                 }
 
                             }
                             if (ci instanceof CellInfoWcdma) {
                                 CellInfoWcdma cic = (CellInfoWcdma) ci;
-                                cic.getCellSignalStrength().getDbm();
-//                                cic.getCellSignalStrength().getRssi();
-                                cic.getCellSignalStrength().getAsuLevel();
-                                cic.getCellSignalStrength().getLevel();
-                                cic.getCellIdentity().getMcc();
-                                cic.getCellIdentity().getMnc();
-                                cic.getCellIdentity().getCid();
+                                cell_info.put("RSSI Dbm", String.valueOf(cic.getCellSignalStrength().getDbm()));
+                                cell_info.put("ASU LEVEL", String.valueOf(cic.getCellSignalStrength().getAsuLevel()));
+                                cell_info.put("LEVEL", String.valueOf(cic.getCellSignalStrength().getLevel()));
+                                cell_info.put("MCC", String.valueOf(cic.getCellIdentity().getMcc()));
+                                cell_info.put("MNC", String.valueOf(cic.getCellIdentity().getMnc()));
+                                cell_info.put("CID", String.valueOf(cic.getCellIdentity().getCid()));
+
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                                    cell_info.put("STATUS", String.valueOf(cic.getCellConnectionStatus()));
+                                }
+
                             }
                         }
                     }
